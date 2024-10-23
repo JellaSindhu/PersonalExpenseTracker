@@ -97,12 +97,12 @@ POST /transactions: Adds a new transaction (income or expense):
 
 
 GET /transactions: Retrieves all transactions:
-![Screenshot (429)](https://github.com/user-attachments/assets/54818f15-7e19-41d4-ba24-1e3da4270c35)
+![Screenshot (428)](https://github.com/user-attachments/assets/068af1ee-e855-4934-bf2a-76cdeaff38d6)
 
 
 
 GET /transactions/:id: Retrieves a transaction by ID:
-![Screenshot (430)](https://github.com/user-attachments/assets/72eeaae4-f89e-4791-97cc-d187e273d0f7)
+![Screenshot (427)](https://github.com/user-attachments/assets/f261774b-eb00-48a1-b128-3d3d9112b65b)
 
 
 PUT /transactions/:id: Updates a transaction by ID:
