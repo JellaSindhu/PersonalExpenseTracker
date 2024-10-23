@@ -1,92 +1,106 @@
-# PersonalExpenseTracker
-Personal Expense Tracker assignment:
+# Personal Expense Tracker
 
-```markdown
-# Floww.ai Node JS - Backend Assignment
+## Objective
 
-## Assignment: Personal Expense Tracker
+The Personal Expense Tracker is a RESTful API developed to manage personal financial records. Users can record their income and expenses, retrieve past transactions, and get summaries by category or time period.
 
-### Objective
-Develop a RESTful API for managing personal financial records. Users can record their income and expenses, retrieve past transactions, and get summaries by category or time period.
+## Tools and Technologies
 
-### Tools and Technologies
 - **Backend Framework**: Node.js with Express.js
 - **Database**: SQLite (for simplicity) or MongoDB (if you prefer a NoSQL solution)
 
-### Requirements
+## Requirements
 
-#### 1. Database Setup
-- If using **SQLite**, create a database with tables:
-  - **transactions**: 
-    - `id`: Unique identifier for each transaction
-    - `type`: Type of transaction (income or expense)
-    - `category`: Category of the transaction
-    - `amount`: Amount of the transaction
-    - `date`: Date of the transaction
-    - `description`: Description of the transaction
-  - **categories**: 
-    - `id`: Unique identifier for each category
-    - `name`: Name of the category
-    - `type`: Type of category (income or expense)
+### Database Setup
 
-- If using **MongoDB**, define collections:
-  - **transactions**: 
-    - `{ type, category, amount, date, description }`
-  - **categories**: 
-    - `{ name, type }`
+1. **SQLite**
+    - Create a database with the following tables:
+      - **transactions**: `id`, `type` (income or expense), `category`, `amount`, `date`, `description`
+      - **categories**: `id`, `name`, `type` (income or expense)
 
-#### 2. API Endpoints
-- **POST /transactions**: Adds a new transaction (income or expense).
-- **GET /transactions**: Retrieves all transactions.
-- **GET /transactions/:id**: Retrieves a transaction by ID.
-- **PUT /transactions/:id**: Updates a transaction by ID.
-- **DELETE /transactions/:id**: Deletes a transaction by ID.
-- **GET /summary**: Retrieves a summary of transactions, such as total income, total expenses, and balance. Optionally, this can be filtered by date range or category.
+2. **MongoDB**
+    - Define collections:
+      - **transactions**: `{ type, category, amount, date, description }`
+      - **categories**: `{ name, type }`
 
-#### 3. Functionality
+### API Endpoints
+
+- **POST** `/transactions`: Adds a new transaction (income or expense).
+- **GET** `/transactions`: Retrieves all transactions.
+- **GET** `/transactions/:id`: Retrieves a transaction by ID.
+- **PUT** `/transactions/:id`: Updates a transaction by ID.
+- **DELETE** `/transactions/:id`: Deletes a transaction by ID.
+- **GET** `/summary`: Retrieves a summary of transactions, such as total income, total expenses, and balance. Optionally, this can be filtered by date range or category.
+
+### Functionality
+
 - Implement route handlers for each endpoint.
 - Provide error handling to manage common issues like invalid transaction IDs, invalid inputs, etc.
 - Optionally add user authentication to protect the routes and associate transactions with specific users.
 
-#### 4. Documentation
-- Document your API endpoints with necessary request and response details.
+## Installation
 
-### Deliverables
-- Source code in a GitHub repository.
-- A `README.md` file that includes:
-  - Setup and run instructions.
-  - API documentation.
-  - Postman screenshots demonstrating each API call.
+1. **Clone the repository**
 
-### Bonus (Optional)
-- Implement basic user authentication and link transactions to specific users.
-- Add pagination to the `GET /transactions` endpoint to handle large volumes of data.
-- Create an endpoint for generating reports, such as monthly spending by category.
-
-## Setup and Run Instructions
-
-1. **Clone the Repository**
    ```bash
    git clone https://github.com/JellaSindhu/PersonalExpenseTracker.git
    cd PersonalExpenseTracker
-   ```
+Install dependencies
 
-2. **Install Dependencies**
-   ```bash
-   npm install
-   ```
+bash
+Copy code
+npm install
+Set up the database (if using SQLite)
 
-3. **Run the Application**
-   ```bash
-   node app.js
-   ```
-   The server will start, and you should see a message indicating that it's running on a specified port.
+You might need to create the database tables as mentioned in the database setup section.
 
-4. **Accessing the API**
-   Use Postman or any API testing tool to make requests to the API endpoints defined above. 
+Start the server
 
-### API Documentation
-Refer to the individual endpoint descriptions above for details on how to use each API.
+bash
+Copy code
+node app.js
+The server will run on http://localhost:3000 (or the specified port).
+
+Usage
+You can test the API endpoints using tools like Postman or curl. Below are some sample requests:
+
+Sample API Requests
+Add a new transaction
+
+Endpoint: POST /transactions
+Request Body:
+json
+Copy code
+{
+  "type": "income",
+  "category": "Salary",
+  "amount": 5000,
+  "date": "2024-10-23",
+  "description": "Monthly Salary"
+}
+Get all transactions
+
+Endpoint: GET /transactions
+Get a transaction by ID
+
+Endpoint: GET /transactions/:id
+Update a transaction
+
+Endpoint: PUT /transactions/:id
+Request Body:
+json
+Copy code
+{
+  "amount": 5500
+}
+Delete a transaction
+
+Endpoint: DELETE /transactions/:id
+Get transaction summary
+
+Endpoint: GET /summary
+Documentation
+The API endpoints are documented with necessary request and response details. Check the code for inline documentation.
 
 ### Postman Screenshots
 (Include screenshots of Postman requests and responses here)
@@ -118,3 +132,23 @@ GET /summary: Retrieves a summary of transactions, such as total income, total e
 
 
 ```
+Bonus Features (Optional)
+Implemented basic user authentication and linked transactions to specific users.
+Added pagination to the GET /transactions endpoint to handle large volumes of data.
+Created an endpoint for generating reports, such as monthly spending by category.
+Contributing
+Feel free to fork the repository and submit pull requests. Any contributions are welcome!
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+vbnet
+Copy code
+
+### Instructions for Customization
+
+- Replace the example GitHub URL with your repository URL.
+- Modify the sections as needed to match your project’s specifics, especially in the **Screenshots** section where you can include actual screenshots from Postman.
+- If you have any other specific features or requirements in your project, be sure to include those in the relevant sections. 
+
+This structured README provides clear instructions for users who want to understand and use your API, as wel
