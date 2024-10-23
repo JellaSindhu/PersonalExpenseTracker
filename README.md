@@ -91,11 +91,28 @@ Refer to the individual endpoint descriptions above for details on how to use ea
 ### Postman Screenshots
 (Include screenshots of Postman requests and responses here)
 
+POST /transactions: Adds a new transaction (income or expense):
 ![Screenshot (429)](https://github.com/user-attachments/assets/fdf9060c-3dbe-4c1d-a1ea-e13b3113279c)
 
-```
 
-### Notes:
-- You can fill in the "Postman Screenshots" section with images that show the API requests and responses for better clarity.
-- Ensure to replace the GitHub clone URL with the actual link to your repository if it's different.
-- Feel free to modify the content to better suit your project's specifics or add any additional sections you find necessary.
+
+GET /transactions: Retrieves all transactions:
+![Screenshot (428)](https://github.com/user-attachments/assets/29887e28-a4af-4602-8eaf-bba5afd6b905)
+
+
+GET /transactions/:id: Retrieves a transaction by ID:
+![Screenshot (430)](https://github.com/user-attachments/assets/6408da11-f20e-4f65-b655-4ebbaa155d50)
+
+
+PUT /transactions/:id: Updates a transaction by ID:
+![Screenshot (430)](https://github.com/user-attachments/assets/ea471e4d-1132-45f4-9894-d7466ebdaf46)
+
+
+DELETE /transactions/:id: Deletes a transaction by ID:
+![Screenshot (432)](https://github.com/user-attachments/assets/e9fcc10e-40e3-42df-9d48-629e7592c844)
+
+
+GET /summary: Retrieves a summary of transactions, such as total income, total expenses, and balance. Optionally, this can be filtered by date range or category.
+![Screenshot (431)](https://github.com/user-attachments/assets/68f37aa5-f9ff-4ad8-be5a-37b9032f0a93)
+
+```
