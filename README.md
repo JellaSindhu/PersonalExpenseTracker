@@ -97,11 +97,12 @@ POST /transactions: Adds a new transaction (income or expense):
 
 
 GET /transactions: Retrieves all transactions:
-![Screenshot (428)](https://github.com/user-attachments/assets/29887e28-a4af-4602-8eaf-bba5afd6b905)
+![Screenshot (429)](https://github.com/user-attachments/assets/54818f15-7e19-41d4-ba24-1e3da4270c35)
+
 
 
 GET /transactions/:id: Retrieves a transaction by ID:
-![Screenshot (430)](https://github.com/user-attachments/assets/6408da11-f20e-4f65-b655-4ebbaa155d50)
+![Screenshot (430)](https://github.com/user-attachments/assets/72eeaae4-f89e-4791-97cc-d187e273d0f7)
 
 
 PUT /transactions/:id: Updates a transaction by ID:
@@ -113,6 +114,7 @@ DELETE /transactions/:id: Deletes a transaction by ID:
 
 
 GET /summary: Retrieves a summary of transactions, such as total income, total expenses, and balance. Optionally, this can be filtered by date range or category.
-![Screenshot (431)](https://github.com/user-attachments/assets/68f37aa5-f9ff-4ad8-be5a-37b9032f0a93)
+![Screenshot (431)](https://github.com/user-attachments/assets/5c052c69-44d4-4761-9b0f-52d0b9bc6784)
+
 
 ```
