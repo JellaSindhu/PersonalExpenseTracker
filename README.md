@@ -138,17 +138,3 @@ Added pagination to the GET /transactions endpoint to handle large volumes of da
 Created an endpoint for generating reports, such as monthly spending by category.
 Contributing
 Feel free to fork the repository and submit pull requests. Any contributions are welcome!
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-vbnet
-Copy code
-
-### Instructions for Customization
-
-- Replace the example GitHub URL with your repository URL.
-- Modify the sections as needed to match your project’s specifics, especially in the **Screenshots** section where you can include actual screenshots from Postman.
-- If you have any other specific features or requirements in your project, be sure to include those in the relevant sections. 
-
-This structured README provides clear instructions for users who want to understand and use your API, as wel
